@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Zesty Makhana – Premium roasted makhana in 6 lip-smacking flavours, perfectly packed in signature jars.">
+  <meta name="keywords" content="makhana, roasted makhana, healthy snacks, flavoured makhana, zesty makhana, vegan snacks, gluten free snacks">
   <title>Zesty Makhana</title>
   <link rel="stylesheet" href="styles.css"/>
   <!-- Google Fonts -->
@@ -89,38 +92,27 @@ header nav a {
   margin-top: 10px;
 }
 
-.product-images {
-  display: flex;
-  justify-content: center; /* equal space around all icons */
-  flex-wrap: wrap;         /* wraps if too narrow */
-  gap: 40px;               /* spacing between each icon block */
-  margin-top: 30px;
-}
+.product-list {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
 
-.product-images img {
-  width: 60px;
-  margin: 0 10px;
-}
-	
-.product-images feature {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  max-width: 100px;
-  text-align: center;
-}
+    .product-item {
+      max-width: 200px;
+    }
 
-.feature img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 0px;
-}
+    .product-item img {
+      border-radius: 12px;
+	  width: 66px;
+    }
 
-.feature p {
-  font-family: "Open Sans", Arial, "sans-serif";
-  font-size: 0.9em;
-  color: #333;
-}
+    .product-item p {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
 
 /* Sections */
 .flavour-intro {
@@ -298,8 +290,33 @@ footer .social-icons a img:hover {
   
   .container p {
     text-align: center;
-    font-size: 0.9rem;	
+    font-size: 1rem;	
   }
+	
+  .product-list {
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	gap: 20px;
+	  }
+
+      .product-item {
+    	width: 45%; /* 2 per row */
+    	text-align: center;
+      }
+
+      .product-item:nth-child(5) {
+    	width: 90%; /* Last item takes full width */
+      }
+		
+	.product-item img {
+        margin-bottom: 10px;
+      }
+      
+      .product-item p {
+      	margin: 0px;
+		font-size: 0.9rem;
+      }
 	
   .section .container {
     flex-direction: column;
@@ -313,7 +330,7 @@ footer .social-icons a img:hover {
 
   .section .content {
     order: 2;
-    font-size: 1.4em
+    font-size: 1rem
   }
 
   .section .image {
@@ -363,29 +380,30 @@ footer .social-icons a img:hover {
 
 	    <p>Premium roasted Makhana that’s light, crunchy, and flavour-packed. Sealed in signature jars to lock in freshness. It’s not just a snack—it’s a better way to munch.</p>
 	  
-      <div class="product-images">
-         <div class="feature">
-              <img src="Images/Zestyicons_Roasted.png" alt="Roasted"/>
+      <div class="product-list">
+        <div class="product-item">
+          <img src="Images/Zestyicons_Roasted.png" alt="Roasted"/>
               <p>Roasted Not Fried</p>
-         </div>
-		 <div class="feature">
-              <img src="Images/Zestyicons_Protein.png" alt="Protein"/>
+        </div>
+	<div class="product-item">
+          <img src="Images/Zestyicons_Protein.png" alt="Protein"/>
               <p>High in Protein</p>
-         </div>
-		 <div class="feature">
-              <img src="Images/Zestyicons_Calorie.png" alt="Calorie"/>
+        </div>
+        <div class="product-item">
+          <img src="Images/Zestyicons_Calorie.png" alt="Calorie"/>
               <p>Low in Calorie</p>
-         </div>
-		 <div class="feature">
-              <img src="Images/Zestyicons_Gluten.png" alt="Gluten"/>
+        </div>
+        <div class="product-item">
+          <img src="Images/Zestyicons_Gluten.png" alt="Gluten"/>
               <p>Gluten Free</p>
-         </div>
-		 <div class="feature">
-              <img src="Images/Zestyicons_msg.png" alt="MSG"/>
+        </div>
+        <div class="product-item">
+          <img src="Images/Zestyicons_msg.png" alt="MSG"/>
               <p>No Msg or <br>Preservatives</p>
-         </div>
+        </div>
+      </div>
+		
         
-      </div>	  
     </div>
   </section>
 
@@ -400,7 +418,7 @@ footer .social-icons a img:hover {
   <section class="section yellow"> 
     <div class="container">		
 	  <div class="image">
-      	<img src="Images/18.png" width="250px" height="" alt="Salt Pepper"/>
+      	<img src="Images/18.png" width="250px" height="" alt="Salt Pepper Flavour Makhana"/>
       </div>
       <div class="content">
 		<h2>Salt & Pepper</h2>
@@ -419,7 +437,7 @@ footer .social-icons a img:hover {
 		<a class="button" href="https://www.amazon.in/dp/B0FHHN6PXC" target="_blank">Grab yours now</a>
       </div>
     <div class="image">
-      <img src="Images/19.png" width="250px" height="" alt="Cream Onion"/>
+      <img src="Images/19.png" width="250px" height="" alt="Cream Onion Flavour Makhana"/>
     </div>
 	</div>
   </section>
@@ -428,7 +446,7 @@ footer .social-icons a img:hover {
   <section class="section purple"> 
     <div class="container">		
 	  <div class="image">
-      	<img src="Images/21.png" width="250px" height="" alt="Cheese"/>
+      	<img src="Images/21.png" width="250px" height="" alt="Cheese Flavour Makhana"/>
       </div>
       <div class="content">
 		<h2>Cheese</h2>
@@ -447,7 +465,7 @@ footer .social-icons a img:hover {
 		<a class="button" href="https://www.amazon.in/dp/B0FHHN5XVK" target="_blank">Grab yours now</a>
       </div>
       <div class="image">
-      	<img src="Images/14_mod.png" width="250px" height="" alt="Pudhina"/>
+      	<img src="Images/14_mod.png" width="250px" height="" alt="Pudhina Flavour Makhana"/>
       </div>
 	</div>
   </section>
@@ -456,7 +474,7 @@ footer .social-icons a img:hover {
   <section class="section pink"> 
     <div class="container">		
 	  <div class="image">
-      	<img src="Images/23.png" width="250px" height="" alt="Tomato chilli"/>
+      	<img src="Images/23.png" width="250px" height="" alt="Tomato chilli Flavour Makhana"/>
       </div>
       <div class="content">
 		<h2>Tomato Chilli</h2>
@@ -475,7 +493,7 @@ footer .social-icons a img:hover {
 		<a class="button" href="https://www.amazon.in/dp/B0FHHMC649" target="_blank">Grab yours now</a>
       </div>
       <div class="image">
-      	<img src="Images/25.png" width="250px" height="" alt="Peri Peri"/>
+      	<img src="Images/25.png" width="250px" height="" alt="Peri Peri Flavour Makhana"/>
       </div>
 	</div>
   </section>
@@ -484,7 +502,7 @@ footer .social-icons a img:hover {
   <section class="section red">
     <div class="container">
       <div class="image">
-      	<img src="Images/28.png" width="250px" height="" alt="all"/>
+      	<img src="Images/28.png" width="250px" height="" alt="All Flavour Makhana"/>
       </div>
 	  <div class="content">
         <h2>All-in-One Combo Jar</h2>
