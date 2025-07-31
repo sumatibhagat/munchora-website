@@ -256,27 +256,30 @@
         margin: 10px;
       }
 	    
-      .product-section, .offer-section, {
+      .offer-section, {
         flex-direction: column;
         text-align: center;
       }
 
       .product-list {
-    	display: flex;
-    	flex-wrap: wrap;
-    	justify-content: center;
-    	gap: 20px;
-      }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 
-      .product-item {
-    	width: 30%; /* roughly 3 per row with gap */
-    	text-align: center;
-      }
+  .product-item {
+    flex: 1 1 30%;
+    max-width: 30%;
+    text-align: center;
+  }
 
-      .product-item:nth-child(4),
-      .product-item:nth-child(5) {
-   	width: 45%; /* slightly wider for 2 in last row */
-      }
+  /* Specifically target the last 2 items to take more space */
+  .product-item:nth-child(4),
+  .product-item:nth-child(5) {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
 		
 	.product-item img {
         margin-bottom: 10px;
