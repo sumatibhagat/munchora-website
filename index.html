@@ -103,7 +103,7 @@
       font-weight: 600;
     }
 	
-    .offer-section, .flavor-section {
+    .offer-section {
       background-color: #fff5eb;
       display: flex;
       flex-wrap: wrap;
@@ -111,7 +111,7 @@
       justify-content: space-between;
     }
 	  
-	.offer-section .container, .flavor-section .container {
+	.offer-section .container {
 	  display: flex;
 	  align-items: center;
 	  justify-content: space-between;
@@ -121,16 +121,16 @@
       gap: 40px;
 	}
 
-    .offer-text, .flavor-text {
+    .offer-text {
       max-width: 1000px;
       text-align: center;
     }
 
-    .offer-text h2, .flavor-text h2 {
+    .offer-text h2 {
       margin-bottom: 1rem;
     }
 
-    .offer-text button, .flavor-text button {
+    .offer-text button {
       margin-top: 1rem;
       padding: 10px 20px;
       background: #000;
@@ -247,20 +247,38 @@
     }
 
     @media (max-width: 768px) {
-      .product-section, .offer-section, .flavor-section {
+      .product-section, .offer-section, {
         flex-direction: column;
         text-align: center;
       }
 
-      .offer-text, .flavor-text {
+      .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .product-item {
+        width: 45%; /* 2 per row */
+        text-align: center;
+      }
+
+      .product-item:nth-child(5) {
+        width: 90%; /* Last item takes full width */
+      }
+		
+	.product-item img {
+        margin-bottom: 10px;
+      }
+      .offer-text {
         text-align: center;
       }
 		
-	footer .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    }
+      footer .footer-content {
+    	flex-direction: column;
+    	align-items: center;
+    	text-align: center;
+      }
 
     footer .social {
       text-align: center;
