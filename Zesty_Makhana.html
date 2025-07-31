@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"/>
 
 <style>
-	/* General Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -289,10 +289,20 @@ footer .social-icons a img:hover {
 /* Responsive */
 @media (max-width: 768px) {
 	
-  .container p{
-	text-align: center;
-	font-size: 1.2em;	
+  header .container {
+    flex-direction: column;
+    text-align: center;
   }
+
+  header nav a {
+    margin: 10px;
+  }
+  
+  .container p {
+    text-align: center;
+    font-size: 1rem;	
+  }
+	
   .section .container {
     flex-direction: column;
     text-align: center;
@@ -305,64 +315,17 @@ footer .social-icons a img:hover {
 
   .section .content {
     order: 2;
-	font-size: 1.4em
+    font-size: 1.4em
   }
 
   .section .image {
     order: 1;
   }
-  .footer-content {
-    flex-direction: column;
-	align-items: center;
-    text-align: center;
-	font-size: 0.8em;
-  }
-  .footer .social {
-	align-items: center;
-  }
-  .footer .social-icons {
-	align-content: space-around;
-	max-width: 100%;
-  }
-  .footer-right {
-    text-align: center;
-  }
-  
-}
-	
-@media (max-width: 480px) {
-  .section .container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .section .container .image,
-  .section .container .content {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 20px 10px;
-  }
-
-  .section .container .image {
-    order: 1; /* Image on top */
-  }
-
-  .section .container .content {
-    order: 2; /* Content below */
-  }
-
-  .section .container .content h2 {
-    font-size: 1.4em; /* Slightly smaller heading */
-  }
-
-  .button {
-    display: inline-block;
-    margin-top: 15px;
-  }
-   footer .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    footer .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     footer .social {
@@ -556,9 +519,8 @@ footer .social-icons a img:hover {
     </div>
   </section>
 	
-  <footer id="contact">
+  <footer>
     <div class="container footer-content">
-		
 	  <div class="social">
 		<p>Connect with us through</p>
 		<div class="social-icons">
