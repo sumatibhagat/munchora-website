@@ -92,7 +92,6 @@
 
     .product-item {
       max-width: 200px;
-      flex: 1 1 150px;
     }
 
     .product-item img {
@@ -263,22 +262,20 @@
       }
 
       .product-list {
-    justify-content: center;
-    gap: 20px;
-  }
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	gap: 20px;
+	}
 
-  .product-item {
-    flex: 0 0 30%;
-    max-width: 30%;
-    text-align: center;
-  }
+      .product-item {
+    	width: 45%; /* 2 per row */
+    	text-align: center;
+      }
 
-  /* Specifically target the last 2 items to take more space */
-  .product-item:nth-child(4),
-  .product-item:nth-child(5) {
-    flex: 0 0 40%;
-    max-width: 40%;
-  }
+      .product-item:nth-child(5) {
+    	width: 90%; /* Last item takes full width */
+      }
 		
 	.product-item img {
         margin-bottom: 10px;
