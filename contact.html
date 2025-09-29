@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Munchora | Premium Snacks | Contact Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
     * {
       box-sizing: border-box;
@@ -140,12 +139,6 @@
       outline: none;
       box-shadow: 0 0 5px rgba(135, 57, 22, 0.5);
     }
-	  
-    /*.g-recaptcha {
-      margin: 0 auto 20px;
-      display: flex;
-      justify-content: center;
-    }*/
 	  
     form button {
       display: block;
@@ -316,19 +309,20 @@
         <p>E: hello@munchora.in</p>
       </div>
       <div class="form-iframe">
-		<form action="https://formspree.io/f/xdkdbqvb" method="POST" onsubmit="window.location='thankyou.html'; return false;">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+		<form action="https://formspree.io/f/xdkdbqvb" method="POST">
+          <input type="hidden" name="_redirect" value="thankyou.html">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
 
-        <button type="submit">Send Message</button>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
         </form>
-        
       </div>
     </div>
   </div>
@@ -361,5 +355,4 @@
     </div>
   </footer>
 </body>
-
 </html>
