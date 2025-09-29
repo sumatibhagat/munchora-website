@@ -114,11 +114,11 @@
       background: #fff;
       padding: 30px;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       margin-bottom: 40px;
     }
 	 
-	form label {
+    form label {
       display: block;
       margin-bottom: 8px;
       font-weight: 600;
@@ -309,21 +309,49 @@
         <p>E: hello@munchora.in</p>
       </div>
       <div class="form-iframe">
-		<form action="https://formspree.io/f/xdkdbqvb" method="POST">
-          <input type="hidden" name="_redirect" value="thankyou.html">
-
+		<form id="contactForm" action="https://formspree.io/f/xdkdbqvb" method="POST">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" pattern="^[A-Za-z\s]+$" title="Only letters and spaces are allowed" required>
 
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" title="Enter a valid email address" required>
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" pattern="^\d{10}$" title="Enter a 10-digit phone number" required>
 
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
+          <textarea id="message" name="message" rows="10" required></textarea>
 
           <button type="submit">Send Message</button>
         </form>
       </div>
+		
+	  <script>
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', async function (event) {
+        
+		  event.preventDefault();
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+              window.location.href = "thankyou.html"; // Redirect on success
+            } else {
+              let data = await response.json();
+              alert(data.errors ? data.errors.map(e => e.message).join(", ") : "Oops! Something went wrong.");
+            }
+            } catch (err) {
+              alert("Network error. Please try again later.");
+            }
+        });
+      </script>
     </div>
   </div>
 
@@ -355,4 +383,5 @@
     </div>
   </footer>
 </body>
+
 </html>
